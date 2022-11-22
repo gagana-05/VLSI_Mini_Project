@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER myip_adder8bit
+	OPTION supported_peripherals = (myip_adder8bit);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = myip_adder8bit;
+END DRIVER

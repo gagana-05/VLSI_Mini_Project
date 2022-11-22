@@ -1,0 +1,361 @@
+
+*** Running vivado
+    with args -log myip_lorenz_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source myip_lorenz_v1_0.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source myip_lorenz_v1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 384.102 ; gain = 41.805
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/users/gagan/desktop/vivstuff/ip_repo/myip_lorenz_1_0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental c:/users/gagan/desktop/vivstuff/ip_repo/edit_myip_lorenz_v1_0.srcs/utils_1/imports/synth_1/myip_lorenz_v1_0.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from c:/users/gagan/desktop/vivstuff/ip_repo/edit_myip_lorenz_v1_0.srcs/utils_1/imports/synth_1/myip_lorenz_v1_0.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top myip_lorenz_v1_0 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20924
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 835.785 ; gain = 413.039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'myip_lorenz_v1_0' [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_lorenz_v1_0_S00_AXI' [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ddr' [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:4]
+INFO: [Synth 8-6157] synthesizing module 'signed_mult' [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'signed_mult' (0#1) [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:60]
+INFO: [Synth 8-6157] synthesizing module 'integrator' [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'integrator' (0#1) [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ddr' (0#1) [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/src/lorenz.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_lorenz_v1_0_S00_AXI' (0#1) [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_lorenz_v1_0' (0#1) [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0.v:4]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0_S00_AXI.v:229]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0_S00_AXI.v:230]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [c:/Users/gagan/Desktop/Vivstuff/ip_repo/myip_lorenz_1_0/hdl/myip_lorenz_v1_0_S00_AXI.v:231]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module myip_lorenz_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 926.883 ; gain = 504.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 926.883 ; gain = 504.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 926.883 ; gain = 504.137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 926.883 ; gain = 504.137
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out, operation Mode is: A*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out, operation Mode is: A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/bz/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out, operation Mode is: A2*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/int1/v1_reg is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/int1/v1_reg is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out, operation Mode is: A2*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/xy/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out, operation Mode is: A*B2.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out, operation Mode is: A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s2/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out, operation Mode is: A*B.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out, operation Mode is: A*B.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: Generating DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+DSP Report: operator myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out is absorbed into DSP myip_lorenz_v1_0_S00_AXI_inst/UIP/s1/mult_out.
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module myip_lorenz_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module myip_lorenz_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module myip_lorenz_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module myip_lorenz_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module myip_lorenz_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module myip_lorenz_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myip_lorenz_v1_0 | A*B2             | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B  | 15     | 15     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A2*B             | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B  | 18     | 15     | -      | -      | 47     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A2*B2            | 18     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B2 | 15     | 15     | -      | -      | 30     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B2 | 18     | 15     | -      | -      | 47     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A*B2             | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B  | 15     | 15     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A2*B             | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | (PCIN>>17)+A2*B  | 18     | 15     | -      | -      | 47     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | A*B              | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | (PCIN>>17)+A*B   | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | (PCIN>>17)+A*B   | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|myip_lorenz_v1_0 | A*B'           | 17     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A'*B  | 30     | 18     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A'*B           | 17     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A*B   | 0      | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | A*B            | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | PCIN>>17+A*B   | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | A*B            | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|signed_mult      | PCIN>>17+A*B   | 0      | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A*B'           | 17     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A'*B  | 30     | 18     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A'*B           | 17     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A'*B  | 17     | 18     | -      | -      | 47     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A'*B'          | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A'*B' | 30     | 18     | -      | -      | 30     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | A'*B'          | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|myip_lorenz_v1_0 | PCIN>>17+A'*B' | 17     | 18     | -      | -      | 47     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   127|
+|3     |DSP48E1 |    16|
+|4     |LUT1    |     2|
+|5     |LUT2    |   578|
+|6     |LUT3    |    97|
+|7     |LUT4    |     4|
+|8     |LUT5    |    12|
+|9     |LUT6    |    66|
+|10    |FDRE    |   235|
+|11    |FDSE    |     1|
+|12    |IBUF    |    49|
+|13    |OBUF    |    41|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-------------------------+------+
+|      |Instance                        |Module                   |Cells |
++------+--------------------------------+-------------------------+------+
+|1     |top                             |                         |  1229|
+|2     |  myip_lorenz_v1_0_S00_AXI_inst |myip_lorenz_v1_0_S00_AXI |  1138|
+|3     |    UIP                         |ddr                      |   977|
+|4     |      bz                        |signed_mult              |    63|
+|5     |      int1                      |integrator               |   168|
+|6     |      int2                      |integrator_0             |   194|
+|7     |      int3                      |integrator_1             |   199|
+|8     |      s1                        |signed_mult_2            |   134|
+|9     |      s2                        |signed_mult_3            |    93|
+|10    |      xy                        |signed_mult_4            |    95|
++------+--------------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1141.016 ; gain = 718.270
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1150.922 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1248.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e35bd654
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1248.016 ; gain = 833.777
+INFO: [Common 17-1381] The checkpoint 'c:/Users/gagan/Desktop/Vivstuff/ip_repo/edit_myip_lorenz_v1_0.runs/synth_1/myip_lorenz_v1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file myip_lorenz_v1_0_utilization_synth.rpt -pb myip_lorenz_v1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 22 14:14:29 2022...
