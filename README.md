@@ -1,3 +1,4 @@
 # VLSI_Mini_Project
 
-Coursework 5th Semester
+* 5th Semester CourseWork
+* refer REPORT for all details
